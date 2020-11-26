@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+    <div>
+        <h3>
+            Registration
+        </h3>
+        <form action="#" id="form">
+
+            <div class="nameInput">
+                <input class="input-field" type="name" id="name" name="" placeholder="Name">
+                <span class="text" id="nameText"></span>
+            </div>
+
+            <div class="emailInput">
+                <input class="input-field" type="text" id="email" name="" placeholder="Enter Email" onkeydown="validation()">
+                <span class="text" id="emailText"></span>
+            </div>
+
+            <div class="pwd-input">
+                <input class="input-field" type="password" id="psw" name="psw"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                placeholder="Password">
+                <span class="text" id="pswText"></span>
+            </div>
+
+            <div class="repwd-input">
+                <input class="input-field" type="password" id="repwd" name="repwd" placeholder="Repeat Password">
+                <span class="text" id="repwdText"></span>
+            </div>
+
+            <div class="tel-input">
+                <input class="input-field" type="tel" id="tel" name="tel" onkeydown="telValidation()"
+                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Phone No.">
+                <span class="text" id="telText"></span>
+            </div>
+
+            <div class="tel-input">
+                <input class="input-field" type="text" id="address" name="address" placeholder="Address">
+                <span class="text" id="addressText"></span>
+            </div>
+
+            <div id="message">
+                <h3>Password must contain the following:</h3>
+                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                <p id="number" class="invalid">A <b>number</b></p>
+                <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+            </div>
+
+            <button type="submit" class="registerbtn">Submit</button>
+            
+        </form>
+    </div>
+
+    <script src="global.js"></script>
+
+</body>
+</html>
