@@ -1,11 +1,6 @@
 <?php 
 session_start();
-$db = mysqli_connect($servername,$username,$passworddb,$dbname);
-$servername = "sql304.epizy.com";
-$username = "epiz_27068095";
-$passworddb = "k9ZvTlB83q";
-$dbname = "epiz_27068095_bookdepo";
-$db = mysqli_connect($servername,$username,$passworddb,$dbname);
+$db = mysqli_connect('localhost', 'root', '', 'bookdepo');
 
 	// initialize variables
 	$id = 0;
